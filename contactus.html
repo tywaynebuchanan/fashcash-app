@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BootStrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/3ca45502f4.js" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.min.js" integrity="sha512-06NZg89vaTNvnFgFTqi/dJKFadQ6FIglD6Yg1HHWAUtVFFoXli9BZL4q4EO1UTKpOfCfW5ws2Z6gw49Swsilsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <title>Home Page &mdash; Dolla Financial Clone</title>
+</head>
+<body>
+  
+ <!--Navigation  Section-->
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary mb-" style="background-color: #ffffff;">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">
+            <img src="images/logo.png" alt="Fast Cash Financial" width="30" height="24">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Loan Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Regular Loans</a></li>
+            <li><a class="dropdown-item" href="#">Other Loans</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/news.html">News</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/contactus.html">Contact Us</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/frequently-asked-questions.html">FAQs</a>
+        </li>
+      </ul>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+           <a class="btn btn-success" role="button" aria-disabled="true">Refer a friend</a>
+            <a class="btn btn-success" role="button" aria-disabled="true">Apply Today</a>   
+        </div>
+    </div>
+  </div>
+  </nav>
+  <!--Navgiation Section Ends-->
+
+    <!--Hero Image-->
+  <div class="hero-section mt-5">
+    <div class="hero-bg-contact">
+      <div class="container-md text-title-white d-flex heading">
+        <div class="title mt-5">
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+  
+
+  <!--Hero Image End-->
+
+  <!--Contact Us Form-->
+
+  <div class="container pt-5 pb-5">
+
+    <div class="form-container">
+        <div class="form-section">
+           
+            <form method = "post" class ="row g-3 p-5" id="contact-form">
+                 <h5 class="text-uppercase mb-4 mt-4">Message</h5>
+            <div class="col-md-6">
+                <label for="firstname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname">
+                <small class="text-danger" id = "validateFirstname"></small>
+            </div>
+            <div class="col-md-6">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastname"  name="lastname">
+                <small class="text-danger" id = "validateLastname"></small>
+            </div>
+
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <small class="text-danger" id = "validateEmail"></small>
+
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phonenumber">
+                <small class="text-danger" id = "validatePhone"></small>
+            </div>
+            
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="message" style="height: 100px"></textarea>
+                 <label for="message">Messgae</label>
+                  <small class="text-danger" id = "validateMessage"></small>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" name = "submit" class="btn btn-success">Send Message</button>
+            </div>
+        </form>
+        </div>
+        <div class="form-side p-5">
+            <h5 class="text-uppercase mb-4 ps-2">our contact</h5>
+            <div class="contact-details mb-2">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="content">
+                    <p>Email Address</p>
+                    <p>info@dollafinancial.com</p>  
+                </div>
+                
+            </div>
+             <div class="contact-details mb-2">
+                <div>
+                   <i class="fa-solid fa-phone-flip"></i>
+                </div>
+                <div class="content">
+                    <p>Call Us</p>
+                    <p>876-777-9999</p>  
+                </div>
+                
+            </div>
+
+            <h5 class="text-uppercase mb-4 mt-4 ps-2">social media</h5>
+                <div class="row social-icons">
+                    <div class="d-inline-flex justify-content-between">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </div>
+                </div>
+
+             <h5 class="text-uppercase mb-4 mt-4 ps-2">opening hours</h5>
+              <div class="contact-details mb-2">
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="content">
+                    <p>Mondays - Thursdays</p>
+                    <p>8:30am - 4:00pm</p>  
+                </div>
+                
+                </div>
+             <div class="contact-details mb-6">
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="content">
+                    <p>Fridays</p>
+                    <p>8:30am - 3:00pm</p>  
+                </div>
+                
+             </div>
+            
+        </div>
+    </div>
+        
+
+        
+        
+  </div>
+
+  <!--Contact Us Form End-->
+
+<!--Footer-->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-md-left">
+        <div class="row text-md-left">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <img src="images/logo.png" alt="Fast Cash Logo" srcset="" class="footer-logo">
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 pb-3">Loan Products</h5>
+                    <p><a href="#" class="footer-links">Fast Cash Personal Loan</a></p>
+                    <p><a href="#" class="footer-links">Fast Cash Bizz Loan</a></p>
+                    <p><a href="#" class="footer-links">Fast Cash Debt Loan</a></p>
+                    <p><a href="#" class="footer-links">Fash Cash Party Loan</a></p>
+                </ul>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 pb-3">Get Started</h5>
+                    <p><a href="/index.html" class="footer-links">Home</a></p>
+                    <p><a href="/aboutus.html" class="footer-links">About Us</a></p>
+                    <p><a href="/contactus.html" class="footer-links">Apply</a></p>
+                    <p><a href="/news.html" class="footer-links">News</a></p>
+            </div>
+              <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase text-black mb-4 pb-3">Contact Us</h5>
+                    <p><i class="fa-solid fa-phone"></i> 876-777-9999</p>
+                    <p><i class="fa-solid fa-phone"></i> 876-888-0000</p>
+                    <p><i class="fa-solid fa-location-crosshairs"></i>
+                         Unit #1, Barbican Business Centre, 88 Barbican Road, Kingston 6, St. Andrew</p>
+            </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase text-nowrap pb-3">Newsletter</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="text">Name</label>
+                        <input type="text" name = "name" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name = "email" class="form-control mb-3" id="exampleInputPassword1" placeholder="Email Address">
+                    </div>
+                    <a class="btn btn-success btn-lg" role="button" aria-disabled="true">Apply Today</a> 
+                </form>
+                
+            </div>  
+        </div>
+    </div>
+  </footer>
+<!--Footer Ends-->
+  <!--Javascript-->
+<script src="js/index.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!--Icon Icons-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>
